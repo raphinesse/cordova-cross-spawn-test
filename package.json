@@ -1,0 +1,29 @@
+{
+  "name": "cross-spawn-test",
+  "version": "0.0.1",
+  "description": "Test new cross-spawn implementation of superspawn ",
+  "license": "MIT",
+  "author": "Raphael von der Grün",
+  "scripts": {
+    "test": "node index.js",
+    "postinstall": "node setup.js"
+  },
+  "xo": {
+    "space": 2,
+    "prettier": true
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "dependencies": {
+    "execa": "^1.0.0",
+    "listr": "^0.14.2",
+    "spodr": "^4.3.1"
+  },
+  "devDependencies": {
+    "xo": "^0.23.0"
+  }
+}
