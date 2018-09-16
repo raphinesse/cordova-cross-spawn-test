@@ -21,7 +21,10 @@ function cloneRepos(repos) {
       title: repo,
       task: () => cloneRepo(repo),
     })),
-    { concurrent: true }
+    {
+      concurrent: true,
+      renderer: process.env.TRAVIS ? 'verbose' : 'default',
+    }
   )
   console.log('Cloning repositories')
   return tasks.run()

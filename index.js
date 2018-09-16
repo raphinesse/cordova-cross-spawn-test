@@ -18,6 +18,7 @@ function runRepoTests(repos) {
     {
       concurrent: true,
       exitOnError: false,
+      renderer: process.env.TRAVIS ? 'verbose' : 'default',
     }
   )
   console.log('Running tests')
