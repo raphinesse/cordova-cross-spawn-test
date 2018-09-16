@@ -13,6 +13,7 @@ function setupAllRepos() {
     .then(_ => checkoutBranch('cordova-common', TEST_BRANCH))
     .then(installDependencies)
     .then(linkRepos)
+    .then(logRepoStatus)
 }
 
 function cloneRepos(repos) {
@@ -48,6 +49,10 @@ function linkRepos() {
 function installDependencies() {
   console.log('Installing dependecies')
   return execa('spodr', ['update', '--deps', '-j1'], { stdio: 'inherit' })
+}
+
+function logRepoStatus() {
+  return execa('spodr', ['status', '--name-only'], { stdio: 'inherit' })
 }
 
 setupAllRepos()
