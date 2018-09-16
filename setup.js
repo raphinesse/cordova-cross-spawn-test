@@ -12,7 +12,7 @@ function setupAllRepos() {
     .then(cloneRepos)
     .then(_ => checkoutBranch('cordova-cli', TEST_BRANCH))
     .then(_ => checkoutBranch('cordova-lib', TEST_BRANCH))
-    .then(_ => checkoutBranch('cordova-common', TEST_BRANCH))
+    .then(_ => checkoutBranch('cordova-common', 'cross-spawn'))
     .then(installDependencies)
     .then(linkRepos)
     .then(logRepoStatus)
