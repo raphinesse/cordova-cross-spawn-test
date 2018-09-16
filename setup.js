@@ -10,6 +10,7 @@ function setupAllRepos() {
   Promise.resolve(require('./repos'))
     .then(cloneRepos)
     .then(_ => checkoutBranch('cordova-cli', TEST_BRANCH))
+    .then(_ => checkoutBranch('cordova-lib', TEST_BRANCH))
     .then(_ => checkoutBranch('cordova-common', TEST_BRANCH))
     .then(installDependencies)
     .then(linkRepos)
