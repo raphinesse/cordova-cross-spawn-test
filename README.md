@@ -11,7 +11,7 @@ git clone https://github.com/raphinesse/cordova-cross-spawn-test.git && cd cordo
 ```
 npm i
 ```
-- Run tests for all repositories using `cordova-common@master` __current master branch__. This is to check that these tests pass on your machine *without the `cross-spawn` change*.
+- Run tests for all repositories using `cordova-common@master`. This is to check that these tests pass on your machine _without_ the `cross-spawn` change.
 ```
 npm t
 ```
