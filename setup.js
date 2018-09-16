@@ -3,6 +3,7 @@
 const { join } = require('path')
 const execa = require('execa')
 const Listr = require('listr')
+const repos = require('./repos')
 
 const TEST_BRANCH = 'cross-spawn-test'
 
@@ -38,6 +39,7 @@ function cloneRepo(name) {
 }
 
 function checkoutBranch(repo, branch) {
+  if (!repos.includes(repo)) return
   const cwd = join(__dirname, repo)
   return execa('git', ['checkout', branch], { cwd })
 }
