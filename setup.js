@@ -25,6 +25,7 @@ function cloneRepos(repos) {
       task: () => cloneRepo(repo),
     })),
     {
+      concurrent: true,
       renderer: process.env.TRAVIS ? 'verbose' : 'default',
     }
   )
