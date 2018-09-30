@@ -16,7 +16,6 @@ function runRepoTests(repos) {
       task: () => runRepoTest(repo),
     })),
     {
-      concurrent: true,
       exitOnError: false,
       renderer: process.env.TRAVIS ? 'verbose' : 'default',
     }
