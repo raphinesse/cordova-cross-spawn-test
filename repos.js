@@ -9,7 +9,7 @@ module.exports = [
 
   // These all require SDKs to be setup. Enable only those you can test
   // 'cordova-android',
-  // 'cordova-ios',
-  // 'cordova-osx',
+  'cordova-ios',
+  'cordova-osx',
   // 'cordova-windows',
 ]
